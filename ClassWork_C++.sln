@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08_RandomMatrixClasswork", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09_FunctionsClasswork", "09_FunctionsClasswork\09_FunctionsClasswork.vcxproj", "{91AC40B3-B948-42D6-8DC3-80CF0F8358EF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10_OverloadFunctionTemplateClasswork", "10_OverloadFunctionTemplateClasswork\10_OverloadFunctionTemplateClasswork.vcxproj", "{57F20B4C-6281-4913-B3B5-E62D5DC1D77A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{91AC40B3-B948-42D6-8DC3-80CF0F8358EF}.Release|x64.Build.0 = Release|x64
 		{91AC40B3-B948-42D6-8DC3-80CF0F8358EF}.Release|x86.ActiveCfg = Release|Win32
 		{91AC40B3-B948-42D6-8DC3-80CF0F8358EF}.Release|x86.Build.0 = Release|Win32
+		{57F20B4C-6281-4913-B3B5-E62D5DC1D77A}.Debug|x64.ActiveCfg = Debug|x64
+		{57F20B4C-6281-4913-B3B5-E62D5DC1D77A}.Debug|x64.Build.0 = Debug|x64
+		{57F20B4C-6281-4913-B3B5-E62D5DC1D77A}.Debug|x86.ActiveCfg = Debug|Win32
+		{57F20B4C-6281-4913-B3B5-E62D5DC1D77A}.Debug|x86.Build.0 = Debug|Win32
+		{57F20B4C-6281-4913-B3B5-E62D5DC1D77A}.Release|x64.ActiveCfg = Release|x64
+		{57F20B4C-6281-4913-B3B5-E62D5DC1D77A}.Release|x64.Build.0 = Release|x64
+		{57F20B4C-6281-4913-B3B5-E62D5DC1D77A}.Release|x86.ActiveCfg = Release|Win32
+		{57F20B4C-6281-4913-B3B5-E62D5DC1D77A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
