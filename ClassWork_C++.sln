@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10_OverloadFunctionTemplate
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13_PointerInFunctionClasswork", "13_PointerInFunctionClasswork\13_PointerInFunctionClasswork.vcxproj", "{13C89A27-D4C7-4D0F-8130-1E8CDF193E13}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "15_CStyleLinesClasswork", "15_CStyleLinesClasswork\15_CStyleLinesClasswork.vcxproj", "{9F9061E9-8572-4328-A5A7-5BCEA68D5E0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{13C89A27-D4C7-4D0F-8130-1E8CDF193E13}.Release|x64.Build.0 = Release|x64
 		{13C89A27-D4C7-4D0F-8130-1E8CDF193E13}.Release|x86.ActiveCfg = Release|Win32
 		{13C89A27-D4C7-4D0F-8130-1E8CDF193E13}.Release|x86.Build.0 = Release|Win32
+		{9F9061E9-8572-4328-A5A7-5BCEA68D5E0A}.Debug|x64.ActiveCfg = Debug|x64
+		{9F9061E9-8572-4328-A5A7-5BCEA68D5E0A}.Debug|x64.Build.0 = Debug|x64
+		{9F9061E9-8572-4328-A5A7-5BCEA68D5E0A}.Debug|x86.ActiveCfg = Debug|Win32
+		{9F9061E9-8572-4328-A5A7-5BCEA68D5E0A}.Debug|x86.Build.0 = Debug|Win32
+		{9F9061E9-8572-4328-A5A7-5BCEA68D5E0A}.Release|x64.ActiveCfg = Release|x64
+		{9F9061E9-8572-4328-A5A7-5BCEA68D5E0A}.Release|x64.Build.0 = Release|x64
+		{9F9061E9-8572-4328-A5A7-5BCEA68D5E0A}.Release|x86.ActiveCfg = Release|Win32
+		{9F9061E9-8572-4328-A5A7-5BCEA68D5E0A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
