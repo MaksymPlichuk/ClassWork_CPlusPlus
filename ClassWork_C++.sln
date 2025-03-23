@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13_PointerInFunctionClasswo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "15_CStyleLinesClasswork", "15_CStyleLinesClasswork\15_CStyleLinesClasswork.vcxproj", "{9F9061E9-8572-4328-A5A7-5BCEA68D5E0A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_WhileHomework", "04_WhileHomework\04_WhileHomework.vcxproj", "{B99DEB50-8F36-4684-BFF5-8CFB5A6FD69E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{9F9061E9-8572-4328-A5A7-5BCEA68D5E0A}.Release|x64.Build.0 = Release|x64
 		{9F9061E9-8572-4328-A5A7-5BCEA68D5E0A}.Release|x86.ActiveCfg = Release|Win32
 		{9F9061E9-8572-4328-A5A7-5BCEA68D5E0A}.Release|x86.Build.0 = Release|Win32
+		{B99DEB50-8F36-4684-BFF5-8CFB5A6FD69E}.Debug|x64.ActiveCfg = Debug|x64
+		{B99DEB50-8F36-4684-BFF5-8CFB5A6FD69E}.Debug|x64.Build.0 = Debug|x64
+		{B99DEB50-8F36-4684-BFF5-8CFB5A6FD69E}.Debug|x86.ActiveCfg = Debug|Win32
+		{B99DEB50-8F36-4684-BFF5-8CFB5A6FD69E}.Debug|x86.Build.0 = Debug|Win32
+		{B99DEB50-8F36-4684-BFF5-8CFB5A6FD69E}.Release|x64.ActiveCfg = Release|x64
+		{B99DEB50-8F36-4684-BFF5-8CFB5A6FD69E}.Release|x64.Build.0 = Release|x64
+		{B99DEB50-8F36-4684-BFF5-8CFB5A6FD69E}.Release|x86.ActiveCfg = Release|Win32
+		{B99DEB50-8F36-4684-BFF5-8CFB5A6FD69E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
