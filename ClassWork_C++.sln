@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06_IcnludeCyclesHomework", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "17_rowsClasswork", "17_rowsClasswork\17_rowsClasswork.vcxproj", "{10797109-9DA3-4481-A6F7-2A05CBE2A4B1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "18_DynamicMemoryClasswork", "18_DynamicMemoryClasswork\18_DynamicMemoryClasswork.vcxproj", "{868362B6-26CE-4EE7-9230-A991D3FCAB31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{10797109-9DA3-4481-A6F7-2A05CBE2A4B1}.Release|x64.Build.0 = Release|x64
 		{10797109-9DA3-4481-A6F7-2A05CBE2A4B1}.Release|x86.ActiveCfg = Release|Win32
 		{10797109-9DA3-4481-A6F7-2A05CBE2A4B1}.Release|x86.Build.0 = Release|Win32
+		{868362B6-26CE-4EE7-9230-A991D3FCAB31}.Debug|x64.ActiveCfg = Debug|x64
+		{868362B6-26CE-4EE7-9230-A991D3FCAB31}.Debug|x64.Build.0 = Debug|x64
+		{868362B6-26CE-4EE7-9230-A991D3FCAB31}.Debug|x86.ActiveCfg = Debug|Win32
+		{868362B6-26CE-4EE7-9230-A991D3FCAB31}.Debug|x86.Build.0 = Debug|Win32
+		{868362B6-26CE-4EE7-9230-A991D3FCAB31}.Release|x64.ActiveCfg = Release|x64
+		{868362B6-26CE-4EE7-9230-A991D3FCAB31}.Release|x64.Build.0 = Release|x64
+		{868362B6-26CE-4EE7-9230-A991D3FCAB31}.Release|x86.ActiveCfg = Release|Win32
+		{868362B6-26CE-4EE7-9230-A991D3FCAB31}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
