@@ -1,15 +1,172 @@
+Ôªø//–í–∏–≤–µ—Å—Ç–∏ –Ω–∞ –µ–∫—Ä–∞–Ω —Ñ—ñ–≥—É—Ä–∏, –∑–∞–ø–æ–≤–Ω–µ–Ω—ñ –∑—ñ—Ä–æ—á–∫–∞–º–∏.
+//–î—ñ–∞–ª–æ–≥ –∑ –∫–æ—Ä–∏—Å—Ç—É–≤–∞—á–µ–º —Ä–µ–∞–ª—ñ–∑—É–≤–∞—Ç–∏ –∑–∞ –¥–æ–ø–æ–º–æ–≥–æ—é –º–µ–Ω—é.
 #include <iostream>
 using namespace std;
-//¬Ë‚ÂÒÚË Ì‡ ÂÍ‡Ì Ù≥„ÛË, Á‡ÔÓ‚ÌÂÌ≥ Á≥Ó˜Í‡ÏË.
-//ƒ≥‡ÎÓ„ Á ÍÓËÒÚÛ‚‡˜ÂÏ Â‡Î≥ÁÛ‚‡ÚË Á‡ ‰ÓÔÓÏÓ„Ó˛ ÏÂÌ˛.
 int main()
 {
-	for (int i = 10; i > 0; i--)
-	{
-		for (int j = 0; j < 10; j++)
-		{
-			cout << "*" << " ";
-		}
-		cout << endl;
-	}
+ int size = 10;
+ int choice;
+
+ while (true)
+ {
+     cout << "Enter number to build a section form 1-10 & 0 to exit: " << endl;
+     cin >> choice;
+     if (choice == 1)
+     {
+         for (int i = 0; i < size; i++)
+         {
+             for (int j = 0; j < size; j++)
+             {
+                 if (i <= j)
+                     cout << "|###|";
+                 else
+                     cout << "|===|";
+             }
+             cout << endl;
+         }
+         cout << endl;
+     }
+     else if (choice == 2)
+     {
+         for (int i = 0; i < size; i++)
+         {
+             for (int j = 0; j < size; j++)
+             {
+                 if (i >= j)
+                     cout << "|###|";
+                 else
+                     cout << "|===|";
+             }
+             cout << endl;
+         }
+         cout << endl;
+     }
+     else if (choice == 3)
+     {
+         for (int i = 0; i < size; i++)
+         {
+             for (int j = 0; j < size; j++)
+             {
+                 if (i <= j && i + j <= size - 1)
+                     cout << "|###|";
+                 else
+                     cout << "|===|";
+             }
+             cout << endl;
+         }
+         cout << endl;
+     }
+     else if (choice == 4)
+     {
+         for (int i = 0; i < size; i++)
+         {
+             for (int j = 0; j < size; j++)
+             {
+                 if (i >= j && i + j >= size - 1)
+                     cout << "|###|";
+                 else
+                     cout << "|===|";
+             }
+             cout << endl;
+         }
+         cout << endl;
+     }
+     else if (choice == 5)
+     {
+ 
+         for (int i = 0; i < size; i++)
+         {
+             for (int j = 0; j < size; j++)
+             {
+                 if ((i <= j && i + j <= size - 1) || (i >= j && i + j >= size - 1))
+                     cout << "|###|";
+                 else
+                     cout << "|===|";
+             }
+             cout << endl;
+         }
+         cout << endl;
+     }
+     else if (choice == 6)
+     {
+         for (int i = 0; i < size; i++)
+         {
+             for (int j = 0; j < size; j++)
+             {
+                 if ((i >= j && i + j <= size - 1) || (i <= j && i + j >= size - 1))
+                     cout << "|###|";
+                 else
+                     cout << "|===|";
+             }
+             cout << endl;
+         }
+         cout << endl;
+     }
+     else if (choice == 7)
+     {
+         for (int i = 0; i < size; i++)
+         {
+             for (int j = 0; j < size; j++)
+             {
+                 if (i >= j && i + j <= size - 1)
+                     cout << "|###|";
+                 else
+                     cout << "|===|";
+             }
+             cout << endl;
+         }
+         cout << endl;
+     }
+     else if (choice == 8)
+     {
+ 
+         for (int i = 0; i < size; i++)
+         {
+             for (int j = 0; j < size; j++)
+             {
+                 if (i <= j && i + j >= size - 1)
+                     cout << "|###|";
+                 else
+                     cout << "|===|";
+             }
+             cout << endl;
+         }
+         cout << endl;
+     }
+     else if (choice == 9)
+     {
+         for (int i = 0; i < size; i++)
+         {
+             for (int j = 0; j < size; j++)
+             {
+                 if (i + j <= size - 1)
+                     cout << "|###|";
+                 else
+                     cout << "|===|";
+             }
+             cout << endl;
+         }
+         cout << endl;
+     }
+     else if (choice == 10)
+     {
+         for (int i = 0; i < size; i++)
+         {
+             for (int j = 0; j < size; j++)
+             {
+                 if (i + j >= size - 1)
+                     cout << "|###|";
+                 else
+                     cout << "|===|";
+             }
+             cout << endl;
+         }
+         cout << endl;
+     }
+     else if (choice == 0)
+     {
+         break;
+     }
+ }
+ 
 }
