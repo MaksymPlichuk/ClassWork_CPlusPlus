@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_forhomework", "05_forhom
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06_IcnludeCyclesHomework", "06_IcnludeCyclesHomework\06_IcnludeCyclesHomework.vcxproj", "{B6C9EF27-F798-48B1-862B-855435064AD6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09_FunctionsHomeWork", "09_FunctionsHomeWork\09_FunctionsHomeWork.vcxproj", "{FA7B1CBB-AFD8-48CD-98A7-BC87A673C78C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{B6C9EF27-F798-48B1-862B-855435064AD6}.Release|x64.Build.0 = Release|x64
 		{B6C9EF27-F798-48B1-862B-855435064AD6}.Release|x86.ActiveCfg = Release|Win32
 		{B6C9EF27-F798-48B1-862B-855435064AD6}.Release|x86.Build.0 = Release|Win32
+		{FA7B1CBB-AFD8-48CD-98A7-BC87A673C78C}.Debug|x64.ActiveCfg = Debug|x64
+		{FA7B1CBB-AFD8-48CD-98A7-BC87A673C78C}.Debug|x64.Build.0 = Debug|x64
+		{FA7B1CBB-AFD8-48CD-98A7-BC87A673C78C}.Debug|x86.ActiveCfg = Debug|Win32
+		{FA7B1CBB-AFD8-48CD-98A7-BC87A673C78C}.Debug|x86.Build.0 = Debug|Win32
+		{FA7B1CBB-AFD8-48CD-98A7-BC87A673C78C}.Release|x64.ActiveCfg = Release|x64
+		{FA7B1CBB-AFD8-48CD-98A7-BC87A673C78C}.Release|x64.Build.0 = Release|x64
+		{FA7B1CBB-AFD8-48CD-98A7-BC87A673C78C}.Release|x86.ActiveCfg = Release|Win32
+		{FA7B1CBB-AFD8-48CD-98A7-BC87A673C78C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
