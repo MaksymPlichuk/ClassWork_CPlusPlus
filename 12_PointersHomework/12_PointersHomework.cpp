@@ -29,7 +29,7 @@ int main()
     }
     else if (*pa<*pb && *pa<*pc)
     {
-         min = *pc;
+         min = *pa;
     }
     cout << "Product of numbers : " << dob << endl;
     cout << "Average of numbers : " << avg << endl;
