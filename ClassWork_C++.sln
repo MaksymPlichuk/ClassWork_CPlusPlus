@@ -55,6 +55,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "23_IntroToOOP", "23_IntroTo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "24_Constructor_Destructor", "24_Constructor_Destructor\24_Constructor_Destructor.vcxproj", "{CCFE811E-98D8-4CEB-AEF8-7A3F16880FB7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "26_InlineMethodsDelegationStaticFunction", "26_InlineMethodsDelegationStaticFunction\26_InlineMethodsDelegationStaticFunction.vcxproj", "{9D1FE7F3-E465-4817-8643-5F7EDA9BA9C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -271,6 +273,14 @@ Global
 		{CCFE811E-98D8-4CEB-AEF8-7A3F16880FB7}.Release|x64.Build.0 = Release|x64
 		{CCFE811E-98D8-4CEB-AEF8-7A3F16880FB7}.Release|x86.ActiveCfg = Release|Win32
 		{CCFE811E-98D8-4CEB-AEF8-7A3F16880FB7}.Release|x86.Build.0 = Release|Win32
+		{9D1FE7F3-E465-4817-8643-5F7EDA9BA9C6}.Debug|x64.ActiveCfg = Debug|x64
+		{9D1FE7F3-E465-4817-8643-5F7EDA9BA9C6}.Debug|x64.Build.0 = Debug|x64
+		{9D1FE7F3-E465-4817-8643-5F7EDA9BA9C6}.Debug|x86.ActiveCfg = Debug|Win32
+		{9D1FE7F3-E465-4817-8643-5F7EDA9BA9C6}.Debug|x86.Build.0 = Debug|Win32
+		{9D1FE7F3-E465-4817-8643-5F7EDA9BA9C6}.Release|x64.ActiveCfg = Release|x64
+		{9D1FE7F3-E465-4817-8643-5F7EDA9BA9C6}.Release|x64.Build.0 = Release|x64
+		{9D1FE7F3-E465-4817-8643-5F7EDA9BA9C6}.Release|x86.ActiveCfg = Release|Win32
+		{9D1FE7F3-E465-4817-8643-5F7EDA9BA9C6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
