@@ -69,6 +69,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20_FuncPointersPreprocessor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "21_StructuresHomework", "21_StructuresHomework\21_StructuresHomework.vcxproj", "{FFB9E890-EB6E-41FB-8DAF-236AA18E4F5E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "22_NestedStructuresHomework", "22_NestedStructuresHomework\22_NestedStructuresHomework.vcxproj", "{04D01AB5-6570-4ED0-B8B1-75839C51C02A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -341,6 +343,14 @@ Global
 		{FFB9E890-EB6E-41FB-8DAF-236AA18E4F5E}.Release|x64.Build.0 = Release|x64
 		{FFB9E890-EB6E-41FB-8DAF-236AA18E4F5E}.Release|x86.ActiveCfg = Release|Win32
 		{FFB9E890-EB6E-41FB-8DAF-236AA18E4F5E}.Release|x86.Build.0 = Release|Win32
+		{04D01AB5-6570-4ED0-B8B1-75839C51C02A}.Debug|x64.ActiveCfg = Debug|x64
+		{04D01AB5-6570-4ED0-B8B1-75839C51C02A}.Debug|x64.Build.0 = Debug|x64
+		{04D01AB5-6570-4ED0-B8B1-75839C51C02A}.Debug|x86.ActiveCfg = Debug|Win32
+		{04D01AB5-6570-4ED0-B8B1-75839C51C02A}.Debug|x86.Build.0 = Debug|Win32
+		{04D01AB5-6570-4ED0-B8B1-75839C51C02A}.Release|x64.ActiveCfg = Release|x64
+		{04D01AB5-6570-4ED0-B8B1-75839C51C02A}.Release|x64.Build.0 = Release|x64
+		{04D01AB5-6570-4ED0-B8B1-75839C51C02A}.Release|x86.ActiveCfg = Release|Win32
+		{04D01AB5-6570-4ED0-B8B1-75839C51C02A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
