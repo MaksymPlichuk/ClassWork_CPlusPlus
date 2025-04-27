@@ -37,24 +37,49 @@ private:
 public:
 	MyRectangle()
 	{
-		width = 0;
-		height = 0;
+		width = 3;
+		height = 2;
 		symb = '#';
 		c.x = 0;
 		c.y = 0;
 	}
 	MyRectangle(int size)
 	{
+		if (size<=0)
+		{
+			cout << "Enter right size" << endl;
+			width = 1;
+			height = 1;
+		}
+		else
+		{
 		width = size;
 		height = size;
+		}
 		symb = '#';
 		c.x = 0;
 		c.y = 0;
 	}
 	MyRectangle(int width, int height)
 	{
+		if (width<=0)
+		{
+			cout << "Enter right wdith" << endl;
+			this->width = 1;
+		}
+		else
+		{
 		this->width = width;
+		}
+		if (height<=0)
+		{
+			cout << "Enter right height" << endl;
+			this->height = 1;
+		}
+		else
+		{
 		this->height = height;
+		}
 		symb = '#';
 		c.x = 0;
 		c.y = 0;
@@ -64,8 +89,8 @@ public:
 		SetPos(c.x,c.y);
 		for (int i = 0; i < width; i++)
 		{
-
-			for (int i = 0; i < height; i++)
+			SetPos(c.x, c.y + i);
+			for (int j = 0; j < height; j++)
 			{
 
 				cout << symb << " ";
@@ -76,12 +101,37 @@ public:
 	}
 	void change(int width, int height)
 	{
-		
-		this->width = width;
-		
-		this->height = height;
+		if (width <= 0)
+		{
+			cout << "Enter right wdith" << endl;
+			this->width = 1;
+		}
+		else
+		{
+			this->width = width;
+		}
+		if (height <= 0)
+		{
+			cout << "Enter right height" << endl;
+			this->height = 1;
+		}
+		else
+		{
+			this->height = height;
+		}
 	}
-	
+	void move(int x, int y)
+	{
+		if (x <= 0 && y <= 0)
+		{
+			cout << "Error! X or Y are <=0!";
+		}
+		else
+		{
+			c.x = x;
+			c.y = y;
+		}
+	}
 };
 
 int main()
@@ -89,9 +139,11 @@ int main()
 	int width;
 	int height;
 	MyRectangle rect1;
+	rect1.print();
+	Sleep(550);
 	MyRectangle rect2(10);
 	rect2.print();
-	cout << endl;
+	Sleep(550);
 	MyRectangle rect3(11, 15);
 	rect3.print();
 	cout << endl;
@@ -100,5 +152,6 @@ int main()
 	rect3.change(width,height);
 	Sleep(250);
 	system("cls");
+	rect3.move(2, 2);
 	rect3.print();
 }
