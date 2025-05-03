@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{84459acf-a432-4f12-a8bc-4836d9ac221e}</ProjectGuid>
-    <RootNamespace>My24ConstructorDestructorHomework</RootNamespace>
+    <ProjectGuid>{24f65d1c-2b49-4d90-8460-891ab1911a74}</ProjectGuid>
+    <RootNamespace>My29OverloadTypes</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="24_ConstructorDestructorHomework.cpp" />
+    <ClCompile Include="29_OverloadTypes.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
