@@ -77,6 +77,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "32_DynamicStack", "32_Dynam
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "33_QueueWithPriority", "33_QueueWithPriority\33_QueueWithPriority.vcxproj", "{DAC7B3B8-704C-4357-9831-92ED5692A39E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "35_DoubleLinkedList", "35_DoubleLinkedList\35_DoubleLinkedList.vcxproj", "{6D450EF2-CBCE-4B9C-81EC-E355969B1A09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -381,6 +383,14 @@ Global
 		{DAC7B3B8-704C-4357-9831-92ED5692A39E}.Release|x64.Build.0 = Release|x64
 		{DAC7B3B8-704C-4357-9831-92ED5692A39E}.Release|x86.ActiveCfg = Release|Win32
 		{DAC7B3B8-704C-4357-9831-92ED5692A39E}.Release|x86.Build.0 = Release|Win32
+		{6D450EF2-CBCE-4B9C-81EC-E355969B1A09}.Debug|x64.ActiveCfg = Debug|x64
+		{6D450EF2-CBCE-4B9C-81EC-E355969B1A09}.Debug|x64.Build.0 = Debug|x64
+		{6D450EF2-CBCE-4B9C-81EC-E355969B1A09}.Debug|x86.ActiveCfg = Debug|Win32
+		{6D450EF2-CBCE-4B9C-81EC-E355969B1A09}.Debug|x86.Build.0 = Debug|Win32
+		{6D450EF2-CBCE-4B9C-81EC-E355969B1A09}.Release|x64.ActiveCfg = Release|x64
+		{6D450EF2-CBCE-4B9C-81EC-E355969B1A09}.Release|x64.Build.0 = Release|x64
+		{6D450EF2-CBCE-4B9C-81EC-E355969B1A09}.Release|x86.ActiveCfg = Release|Win32
+		{6D450EF2-CBCE-4B9C-81EC-E355969B1A09}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
