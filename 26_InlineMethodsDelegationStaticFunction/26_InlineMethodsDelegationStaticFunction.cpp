@@ -34,7 +34,7 @@ class Abonent {
     Fullname fullname;
     string homephone;
     string workphone;
-    string phone;
+    string mobilephone;
     static int AbonentNum;
 public:
 
@@ -45,7 +45,7 @@ public:
         fullname.lastname = "no lastname";
         homephone = "no homephone";
         workphone = "no workphone";
-        phone = "no phone";
+        mobilephone = "no phone";
         AbonentNum++;
     }
     Abonent(string name, string surname, string lastname):Abonent()
@@ -64,7 +64,7 @@ public:
     }
     Abonent(string name, string surname, string lastname, string homephone, string workphone,string phone):Abonent(name,  surname, lastname, homephone, workphone)
     {
-        this->phone = phone;
+        this->mobilephone = phone;
     }
 
     void printAbonent()
@@ -74,7 +74,7 @@ public:
         cout <<"Lastname :"<< fullname.lastname << endl;
         cout <<"Homephone :"<< homephone << endl;
         cout <<"Workphone :"<< workphone << endl;
-        cout <<"Phone :"<< phone << endl;
+        cout <<"Phone :"<< mobilephone << endl;
     }
     static int getCountAbonent()
     {
