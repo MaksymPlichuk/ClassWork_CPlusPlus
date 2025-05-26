@@ -79,6 +79,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "41_MultyInheritance", "41_M
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "42_AgregationComposition", "42_AgregationComposition\42_AgregationComposition.vcxproj", "{1064EFF9-83F8-4332-B965-B04360C0031A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "43_Exceptions", "43_Exceptions\43_Exceptions.vcxproj", "{03E27B27-05C3-47C2-A2AC-6B9A832DCF62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -391,6 +393,14 @@ Global
 		{1064EFF9-83F8-4332-B965-B04360C0031A}.Release|x64.Build.0 = Release|x64
 		{1064EFF9-83F8-4332-B965-B04360C0031A}.Release|x86.ActiveCfg = Release|Win32
 		{1064EFF9-83F8-4332-B965-B04360C0031A}.Release|x86.Build.0 = Release|Win32
+		{03E27B27-05C3-47C2-A2AC-6B9A832DCF62}.Debug|x64.ActiveCfg = Debug|x64
+		{03E27B27-05C3-47C2-A2AC-6B9A832DCF62}.Debug|x64.Build.0 = Debug|x64
+		{03E27B27-05C3-47C2-A2AC-6B9A832DCF62}.Debug|x86.ActiveCfg = Debug|Win32
+		{03E27B27-05C3-47C2-A2AC-6B9A832DCF62}.Debug|x86.Build.0 = Debug|Win32
+		{03E27B27-05C3-47C2-A2AC-6B9A832DCF62}.Release|x64.ActiveCfg = Release|x64
+		{03E27B27-05C3-47C2-A2AC-6B9A832DCF62}.Release|x64.Build.0 = Release|x64
+		{03E27B27-05C3-47C2-A2AC-6B9A832DCF62}.Release|x86.ActiveCfg = Release|Win32
+		{03E27B27-05C3-47C2-A2AC-6B9A832DCF62}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
