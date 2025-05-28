@@ -1,4 +1,6 @@
-﻿﻿
+﻿
+#include <fstream>
+#include <string>
 #include <iostream>
 using namespace std;
 /*До вже існуючого класу, який має колекцію динамічних об*єктів
@@ -17,6 +19,16 @@ struct Vagon {
     int places;
     int passangers;
 };
+ofstream& operator <<(ofstream& out, const Vagon& vagon)
+{
+    out << vagon.num << " " << vagon.places << " " << vagon.passangers;
+    return out;
+}
+ifstream& operator >>(ifstream& in, Vagon& vagon)
+{
+    in >> vagon.num >> vagon.places >> vagon.passangers;
+    return in;
+}
 class Train
 {
     Vagon* vagons;
@@ -100,26 +112,50 @@ public:
             delete[]vagons;
         }
     }
-    friend ofstream& operator <<(ofstream& out, const Train& animal);
-    friend ifstream& operator >>(ifstream& in, Train& animal);
+    void SaveToFile()
+    {
+        ofstream out("Train.txt", ios_base::out);
+        out << name << endl;
+        out << countVagon << endl;
+        for (int i = 0; i < countVagon; i++)
+        {
+            out << vagons[i] << endl;
+        }
+        out.close();
+        cout << "Save to file " << endl;
+    }
+    void ReadFromFile()
+    {
+        ifstream in("Train.txt", ios_base::in);
+        getline(in, name); //in >> name;
+        in >> countVagon;
+        vagons = new Vagon[countVagon];
+        for (int i = 0; i < countVagon; i++)
+        {
+            in >> vagons[i];
+        }
+        in.close();
+    }
+   /* friend ofstream& operator <<(ofstream& out, const Train& animal);
+    friend ifstream& operator >>(ifstream& in, Train& animal);*/
 };
 
 
-ofstream& operator <<(ofstream& out, const Train& animal)
-{
-    out << train.name << " " << animal.type << " " << animal.age << " " << animal.weight;
-    return out;
-}
-ifstream& operator >>(ifstream& in, Train& animal)
-{
-    in >> animal.name >> animal.type >> animal.age >> animal.weight;
-    return in;
-}
+//ofstream& operator <<(ofstream& out, const Train& animal)
+//{
+//    out << train.name << " " << animal.type << " " << animal.age << " " << animal.weight;
+//    return out;
+//}
+//ifstream& operator >>(ifstream& in, Train& animal)
+//{
+//    in >> animal.name >> animal.type >> animal.age >> animal.weight;
+//    return in;
+//}
 
 
 int main()
 {
-    Train t1("Ford");
+    /*Train t1("Ford");
     t1.Show();
     Vagon vagon1{ 5,20,15 };
     cout << "\nAdded vagon" << endl;
@@ -131,4 +167,8 @@ int main()
     cout << "\nConstructor copy" << endl;
     Train t2(t1);
     t2.Show();
+    t1.SaveToFile();*/
+    Train read;
+    read.ReadFromFile();
+    read.Show();
 }
