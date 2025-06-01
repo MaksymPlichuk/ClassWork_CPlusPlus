@@ -101,6 +101,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "28_OperatorOverloadingHomew
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "29_OverloadTypesHomework", "29_OverloadTypesHomework\29_OverloadTypesHomework.vcxproj", "{38795325-9142-467F-8374-2C34A9E49E23}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "30_LibraryOprator=Homework", "30_LibraryOprator=Homework\30_LibraryOprator=Homework.vcxproj", "{E7D69767-B56F-4548-9C21-15A1874E7CBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -501,6 +503,14 @@ Global
 		{38795325-9142-467F-8374-2C34A9E49E23}.Release|x64.Build.0 = Release|x64
 		{38795325-9142-467F-8374-2C34A9E49E23}.Release|x86.ActiveCfg = Release|Win32
 		{38795325-9142-467F-8374-2C34A9E49E23}.Release|x86.Build.0 = Release|Win32
+		{E7D69767-B56F-4548-9C21-15A1874E7CBE}.Debug|x64.ActiveCfg = Debug|x64
+		{E7D69767-B56F-4548-9C21-15A1874E7CBE}.Debug|x64.Build.0 = Debug|x64
+		{E7D69767-B56F-4548-9C21-15A1874E7CBE}.Debug|x86.ActiveCfg = Debug|Win32
+		{E7D69767-B56F-4548-9C21-15A1874E7CBE}.Debug|x86.Build.0 = Debug|Win32
+		{E7D69767-B56F-4548-9C21-15A1874E7CBE}.Release|x64.ActiveCfg = Release|x64
+		{E7D69767-B56F-4548-9C21-15A1874E7CBE}.Release|x64.Build.0 = Release|x64
+		{E7D69767-B56F-4548-9C21-15A1874E7CBE}.Release|x86.ActiveCfg = Release|Win32
+		{E7D69767-B56F-4548-9C21-15A1874E7CBE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
