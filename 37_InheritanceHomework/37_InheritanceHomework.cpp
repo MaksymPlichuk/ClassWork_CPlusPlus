@@ -34,16 +34,16 @@ public:
     Animal() : type("no type"), speed(0), weight(0), habitat("no habitat") {};
     Animal(string t, int s ,int w, string h) : type(t), speed(s), weight(w), habitat(h) {};
 
-    void Move() {
+    void Move()const {
         cout << type << " moves at speed " << speed << " km/h." << endl;
     };
-    void Show() {
+    void Show()const {
         cout << "Type: " << type << endl;
         cout << "Speed: " << speed << " km/h" << endl;
         cout << "Weight: " << weight << " kilograms" << endl;
         cout << "Habitat: " << habitat << endl;
     };
-    virtual void Say() {
+    virtual void Say()const {
         cout << type << " makes a sound:" << endl;
     };
 };
@@ -55,7 +55,7 @@ public:
     Bird() : Animal(), wingspan(0) {};
     Bird(string t, int s, int w, string h, int ws) : Animal(t, s, w, h), wingspan(ws) {};
 
-    void Show() {
+    void Show()const {
         Animal::Show();
         cout << "Wingspan: " << wingspan << " meters" << endl;
     }
@@ -64,7 +64,7 @@ public:
 class Crow : public Bird {
 public:
     Crow() : Bird("Crow", 50, 2, "Urban", 1) {};
-    void Say() override{
+    void Say()const override{
         cout << type << " makes a sound: kar-kar-kar" << endl;
     };
 };
@@ -76,7 +76,7 @@ public:
     Reptile() : taillength(0) {};
     Reptile(string t, int s, int w, string h, int ts) :Animal(t, s, w, h), taillength(ts) {};
 
-    void Show() {
+    void Show()const {
         Animal::Show();
         cout << "Tail lenght: " << taillength << " cm" << endl;
     }
@@ -85,7 +85,7 @@ public:
 class Salamandra : public Reptile {
 public:
     Salamandra() : Reptile("Salamandra", 1, 1, "Moist", 1) {};
-    void Say() override {
+    void Say()const override {
         cout << type << " makes a sound: tsssssssssssss" << endl;
     };
 };
@@ -97,7 +97,7 @@ public:
     Fish() : lenght(0) {};
     Fish(string t, int s, int w, string h, int l) : Animal(t, s, w, h), lenght(l) {};
     
-    void Show() {
+    void Show()const {
         Animal::Show();
         cout << "Lenght: " << lenght << " meters" << endl;
     }
@@ -106,7 +106,7 @@ public:
 class Catfish :public Fish {
 public:
     Catfish() : Fish("Catfish", 1, 2, "Rivers", 2) {};
-    void Say() override {
+    void Say()const override {
         cout << type << " makes a sound: p-p-p" << endl;
     };
 };
