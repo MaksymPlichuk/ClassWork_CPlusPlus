@@ -115,6 +115,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "35_DoubleLinkedListHomework
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "37_InheritanceHomework", "37_InheritanceHomework\37_InheritanceHomework.vcxproj", "{06C08C6A-08A2-48CD-AE67-DAE26DA5223C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "38_InheritancePolymorphismHomework", "38_InheritancePolymorphismHomework\38_InheritancePolymorphismHomework.vcxproj", "{0597F468-3BBD-45C8-BDAB-22D1F71AA8AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -571,6 +573,14 @@ Global
 		{06C08C6A-08A2-48CD-AE67-DAE26DA5223C}.Release|x64.Build.0 = Release|x64
 		{06C08C6A-08A2-48CD-AE67-DAE26DA5223C}.Release|x86.ActiveCfg = Release|Win32
 		{06C08C6A-08A2-48CD-AE67-DAE26DA5223C}.Release|x86.Build.0 = Release|Win32
+		{0597F468-3BBD-45C8-BDAB-22D1F71AA8AA}.Debug|x64.ActiveCfg = Debug|x64
+		{0597F468-3BBD-45C8-BDAB-22D1F71AA8AA}.Debug|x64.Build.0 = Debug|x64
+		{0597F468-3BBD-45C8-BDAB-22D1F71AA8AA}.Debug|x86.ActiveCfg = Debug|Win32
+		{0597F468-3BBD-45C8-BDAB-22D1F71AA8AA}.Debug|x86.Build.0 = Debug|Win32
+		{0597F468-3BBD-45C8-BDAB-22D1F71AA8AA}.Release|x64.ActiveCfg = Release|x64
+		{0597F468-3BBD-45C8-BDAB-22D1F71AA8AA}.Release|x64.Build.0 = Release|x64
+		{0597F468-3BBD-45C8-BDAB-22D1F71AA8AA}.Release|x86.ActiveCfg = Release|Win32
+		{0597F468-3BBD-45C8-BDAB-22D1F71AA8AA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
