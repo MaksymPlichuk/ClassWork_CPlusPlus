@@ -1,94 +1,52 @@
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
-class Units {
-protected:
-
-public:
-
+struct Item
+{
+    string name;
+    int priceInHrn;
+    int price;
+    int ammount;
+    string type;
+    string description;
 };
 
-class Hero :public Units {
-    string name;
-    int health;
-    int strength;
-    int endurance;
-    int stamina;
-public:
-    Hero() : name("nn"), health(100), strength(1), endurance(100), stamina(100) {};
-    Hero(string n) : name(n), health(100), strength(1), endurance(100), stamina(100) {};
-    void Setname(string n) {
-        name = n;
+class Shop{
+    vector<Item> items;
+public: 
+    Item createItem() {
+        Item i;
+        cout << "==========Create Item==========" << endl;
+        cout << "Enter item name: ";cin >> i.name;
+        cout << "\nEnter item price in Hrn: ";cin >> i.priceInHrn;
+        cout << "\nEnter item price: ";cin >> i.price;
+        cout << "\nEnter item ammount: ";cin >> i.ammount;
+        cout << "\nEnter item type: ";cin >> i.type;
+        cout << "\nEnter item description: ";cin >> i.description;
+        return i;
     }
     void ShowInfo() {
-        cout << "==========Hero=========="<< endl;
-        cout << "Name: " << name << endl;
-        cout << "Strength: " << strength << endl;
-        cout << "Endurance: " << endurance << endl;
-        cout << "Staminame: " << stamina << endl;
+        Item i;
+        cout << "==========Item info=========="<< endl;
+        cout << "Enter item name: " << i.name << endl;
+        cout << "Enter item price in Hrn: " << i.priceInHrn << endl;
+        cout << "Enter item price: " << i.price << endl;
+        cout << "Enter item ammount: " << i.ammount << endl;
+        cout << "Enter item type: " << i.type << endl;
+        cout << "Enter item description: " << i.description << endl;;
     }
+    void addItemToTheShop() {
+        Item i = createItem(); 
+        items.push_back(i);    
+    }
+    void loadtofile() {};
+    void savetofile() {};
+
+    void editItem() {};
 };
 
-class Enemy :public Units {
-protected:
-
-public:
-};
-
-class Bigboss :public Enemy {
-protected:
-
-public:
-};
-
-class Monsters :public Enemy {
-protected:
-
-public:
-};
-
-class Animal :public Enemy {
-protected:
-
-public:
-};
-
-class Wood {
-protected:
-
-public:
-};
-
-class Deck :public Wood {
-protected:
-
-public:
-};
-
-class Bush :public Wood {
-protected:
-
-public:
-};
-
-class Tree :public Wood {
-protected:
-
-public:
-};
-
-class Treasures {
-
-public:
-
-};
-
-class Diamonds {
-
-public:
-
-};
 
 int main()
 {
