@@ -1,0 +1,81 @@
+10
+1
+Macbook Air 16
+33000
+5000
+89
+Laptop
+Apple
+Apple MacBook is a type of Mac laptop computer that is developed and marketed by Apple
+2
+Canon 3000
+3000
+72
+3
+Printer
+Canon
+Printer used and developed by Canon Ink
+3
+Custom PC 778
+39000
+941
+1
+PC
+CompX
+CPU: Core i5 12400F GPU: RTX 4060 RAM: 32 GB
+4
+Custom PC 674
+178000
+4300
+3
+PC
+CompX
+CPU: Ryzen 9 7950X3D GPU: RTX 4090 RAM: 32 GB
+5
+MSI MAG 274
+12000
+300
+16
+Monitor
+MSI
+HZ: 180 size:27
+6
+BenQ ZOWIE XL 2566K
+25000
+600
+4
+Monitor
+BenQ
+HZ: 360 size:24.5
+7
+Logitech G102
+1100
+26
+89
+Mouse
+Logitech
+Cheap good mouse for its price Connection: Wire
+8
+Logitech G Pro X Superlight 2
+5000
+120
+54
+Mouse
+Logitech
+Professional gaming mouse Connection: USB
+9
+Logitech G PRO X TKL Lightspeed
+9000
+220
+26
+Keyboard
+Logitech
+Professional gaming keyboard Type: Mechanical
+10
+Corsair Gaming K70
+12000
+290
+17
+Keyboard
+Corsair
+Durable aluminum frame keyboard 8x faster responsiveness Type: Mechanical
