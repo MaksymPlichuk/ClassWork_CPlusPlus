@@ -1,0 +1,784 @@
+// Selection  Sort - знаходить найменше та міняє місцями
+// Bubble Sort - переставляє більше в кінець
+// Shaker Sort - як bubble але доходячи кінця йде від кінця до початку
+// Insert Sort - знаходить найменше вставляє на початок і зміщує інші елементи
+// Quick Sort - бере за опору (Begin + End)/2 все що менше зліва, а більше справа
+// Binary Search - тільки для впорядкованих масивів
+	
+stack - пам'ять яка має назву | heap - немає тому доступатись до комірок лише через вказівники
+	------Pointers------
+int* pa = &a; &a - адреса
+pa - адреса
+*pa - значення(5)
+pa = &b вказівнки pa(адреса) комірки b(10) 
+int* parr = &arr[0] - &arr адреса
+вказівники мають низький пріоритет тому *(parr+1) --> 2ий елемент масиву
+назва масиву --> вказівник на 0ий елемнт
+p_arr++ перезаписування фіз адреси комірки
+*newptr = 0 //елем = 0 --- > 0 67 34 0 69
+newptr +=3 // переміщ елем на 3 комірки ---> 0 67 34 0 69
+
+int* max - вказівник на адресу | *max розіменування (значення)
+
+for (int i = 0; i < size; i++)
+	{
+		cout << *p_arr << " ";
+		p_arr++; // запис масив у звич порядку
+	}
+	p_arr--;
+	for (int i = 0; i < size; i++)
+	{
+		cout << *p_arr << " ";
+		p_arr--; // розворот масиву
+	}
+
+		-----LINKS-----
+int& lc = c  --------> те саме що і int* lc = &lc
+& - адреса
+силка показує не саму адресу комірки а конкретне значення комірки
+переставити силку НЕМОЖНА
+силка зберігає в собі адресу
+
+		-----SetPos-----
+setw(5) -> резервує 5 клітинок по правому краю
+cin.getline(myname, 255) --> читає з пробілами після 255 обрізає
+
+#include <Windows.h> -> для SetColor і SetPos
+
+void SetColor(int color)
+{
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+}
+void SetPos(int x, int y)
+{
+    COORD c;
+    c.X = x;
+    c.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
+}
+-------------------------------------------------------------------------
+		-----C style lines-----
+char arr[200]
+cout arr+19 --> читає символьний масив з 19 символа
+
+strcpy(copyArr, arr) -> копіює в copyArr сам arr
+strcpy_s --> безпечніша ф-ція видає іншу помилку
+
+strconcat_s --> об'єднує рядки
+strcmp(one,two,4) --> порівнює сисволи не вібьше 4 букв
+_stricmp --> порівнює але ігнорує регістр
+
+strcat_s(copyArr, "!!!") ---> додає до кінця "!!!"
+strncat_s(copyArr, "!!!!!",3) ---> додає до кінця "!!!" небільше 3 !
+
+char symbol = t
+char str[size] = "rfgsdTTTTsd t"
+
+char* p=strchr(str,symbol) - шукає переше входження символа в рядку і повертає вказівник
+p - str - виводить його індекс
+
+p = strrchr(str, symbol) - шукає останнє входження
+
+---------------------------------------------
+		-Dynamic Array-
+static memory -> глобальні змінні
+
+stack -> локальні змінні
+
+int* p = new int{123} -> створ дин масив
+int*& arr -> зміна вказівника на миасив
+
+delete p; видал масив
+
+---------------------------------------------
+
+		-Dynamic Matrix-
+int* p = new int{123}
+&p -> дістаємо адресу вказівника p
+
+передача матриці за посиланням (int**& m) щоб змінити саму матрицю
+
+
+----------------------------------------------
+
+		-Ptr to func-
+using FUN = void (*)(int);
+функція повертає void і приймає int
+
+
+
+---------------------------------------------
+		-Structurs-
+// sturctures//
+const int size =10
+struct DOG
+{
+char nick[size] = "Noname";
+int age =0;
+char color[size] = "Nocolor";
+};
+
+DOG dog{"Jack,"medium"}; //DOG-template  dog - екземпляр типу DOG
+dog.age=2 // належить екземпляру jack
+
+cout << "Dog's nick " << dog.nick << endl;
+cout << "Dog's age " << dog.age << endl;
+cout << "Dog's color " << dog.color << endl;
+
+DOG dog2;
+cout <<"ennter nick : ";
+cin >> dog.nick;
+cout <<"ennter size : ";
+cin >> dog.age;
+cout <<"ennter color : ";
+cin >> dog.color;
+
+cout << "Dog's nick " << dog2.nick << endl;
+cout << "Dog's age " << dog2.age << endl;
+cout << "Dog's color " << dog2.color << endl;
+
+
+DOG cloneJack =dog // всі поля сопіювані в cloneJack
+
+// структури у ф-ції передаються ЗА ЗНАЧЕННЯМИ(by value) тобто приходить копія структури
+const щоб була безпека щоб не змінили(можна без нього) а посилляння для швидшої роботи
+
+void print dog(const Dog& dog) 
+{cout << "Dog's nick " << dog2.nick << endl;
+}
+
+// функція повинна змін поля параметра dog тому передаємо за &(можна за вказівником)
+
+void input(Dog& dog)
+{ cout << "Enter Dog's nick " ;
+cin >> dog.nick;
+}
+
+// операцію доступу до елемента структури через вказівник '->' 
+// операцію доступу до елемента структури через обєкт '.'
+
+DOG* dog3 = new Dog{"Bobik", "large", 52, "black"};
+dog3-> age=5 
+printDog(*dog3)
+
+---------------------------------------------
+
+		-Nested Struct-
+Вкладені структури
+struct Employee {
+	string fullName;
+	string position;
+	int age;
+
+	struct Contacts {
+		string email;
+		string phone;
+	};
+
+	Contacts contacts;
+};
+
+employee.contacts.email - доступ до поля вкладенної структури
+
+Employee::Contacts contacts = {"coname@gmail.com","XXXXXXXX"}; - доступ якщо структура вкладена
+-----------------------------------------------
+
+			-OOP-
+			
+struct - масив різнотипних данних. - object (складний тип даних)
+
+Структурне (процедурне) програмування - працює тільки з глобальними функціями і треба було передавати об'єкт
+
+Три кити ООР
+	-інкапсуляція Encapsulation - властивість пов'язати дані та методи роботи всереди класу (в клас ми вкладаємо змінні, що характеризують обєкт і методи работи з цими змінними)
+		- змінні члени класу треба приховати to private
+		- далі в паблік пишемо методи роботи з змінними
+	
+	-наслідування inheritance - роблять базовий клас і на основі його роблять дочірниій клас
+	
+	-поліморфізм - економія понять. Коли у багатьох класах метод називається однаково а реалізацію має свою.
+
+Об'єктно орієнтоване програмування
+Функції описуються всередині class			
+			
+struct - public
+class - private
+
+this - вказівник на сам об'єкт
+
+----------------------------------------------
+		-ctor-
+		
+Конструктор - це функція що завжди належить до свого завжди має назву классу і має ()
+Не повертає значення, не пишеться void return.
+По замовченюванні конструктор вже є.
+А самостійно можно очистити сміття і вказування дефолтних значень під час конструкції
+
+Конструкторів може бути безліч
+Деструктор - якщо нема динамічних данних, то деструктор не потрібен, вистачає дефолтного. А якщо є динамічні дані то обовязково треба. Деструктором вказується черговість видалення данних		
+		
+уніфвкована ініціалізація - 
+		
+----------------------------------------------
+		-Copy ctor-
+Ініціалізація з копіюванням.
+int b = 3; - створює змінну, і оператор "=" копіює літерал 12
+
+Уніфікована ініціалізація
+int a = {5.12} - замість обрізання до 5, при компіляції буде помилка 
+
+Пряма Ініціалізація:
+int value(15); 
+
+Конструктор копіювання:
+Всі змінні копіюється значення
+Але якщо це вказівник, то він буде вказівати на той же обєкт
+
+Student.student;
+Student.student1(student) - конструктор копіювання копіює в student1 клас student. Але вказівник буде вказувати на дані оригиналу, бо скопіюється адреса вказівника
+
+----------------------------------------------
+
+		-inline methods-
+inline func - компілятор зразу підстав
+invile void Student::Print()
+делегування
+різні конструктори
+
+class Human
+{
+	string name;
+	int age;
+	int weight;
+public:	
+static string count_human;
+	Human()
+	{
+		name="no name"
+		age = 0;
+		weight = 0;
+		count_human++;
+	}
+	Human(string name)Human()
+	{
+		this->name = name;
+	//	age=0;
+	//	weight=0;
+					*/
+	}
+	Human(string name, int age):Human(name)
+	{
+	//	this->name = name;
+		this->age=0;
+	//	weight=0;
+		*/
+	}
+	Human(string name, int age, int weight):Human(name,age)
+	{
+	//	this->name = name;
+	//	this->age=0;
+		this->weight=0;
+								
+	}
+	//////*Human(string name,int weight, int age )
+	/////{
+	/////	this->name = name;
+	/////	this->age=0;
+	/////	this->weight=0;
+	/////
+	/////}
+	/////Human(int age, string name, int weight )
+	/////{
+	/////	this->name = name;
+	/////	this->age=0;
+	/////	this->weight=0;
+	/////
+	/////}*/
+	void Print()
+	{
+		cout << "Name ;" << name<<endl;
+		cout << "Age ;" << age<<endl;
+		cout << "Weight ;" << weight<<endl;
+	}
+};//конструктори мають бути тільки ті які потрібніб всі випадки не треба
+int main()
+{
+	count_human=0;
+	
+	Human h1;
+	h1.Print()
+	
+	Human h2("Petro")
+	h2.Print()
+	
+	Human h3("Ivan", 12)
+	h3.Print()				// різні конструктори
+
+	Human h4("Olga",18 ,50)
+	h4.Print()
+	
+	/*Human h5(18,"Tom" ,50)
+	h5.Print()*/
+}
+
+Abonent:: доступ до середини класу без об'єкта
+
+--------------------------------------------------------
+		--ConstExplicit--
+
+struct Person {
+    string name;
+    int age;
+    float height;
+};
+Person p1;
+p1.name = "Alice";
+// повторення про структури
+
+змінна- іменова ділянка пам'яті певного типу данних яку можна зберігати данні
+об'єкт - класс в якому описані всі необхід змінні 
+
+const об'єкт має мати const function
+
+const independenceDay[3]={4,7,1776};
+
+int getDay() const
+{
+	return day;
+}
+class Date{
+	int day;
+	int month;
+	int year; 
+	const int baseYear;
+}
+//зміна константи
+Date(): day(0), month(0), year(0), baseYear(0){}
+Date(int day, int month, int year, int base): day (day), month (month),
+ year(year), baseYear(base){}
+
+список ініцілізації конструтурів класу
+/список ініціалізаторів/коміркі заповнюються одразу
+
+перетворення типів данних
+int a = 3.33; doulbe -> int /неявне звужуюче
+
+double b(10); int-> double /розширююче
+
+doSomething(5); int->long
+
+float->doulbe; звужуюче 
+
+~Array -> деструктор
+
+explicit - явно / вказ у будь якому констру з 1 аругементом
+/ об'єкт створ тільки через конструктор
+implicit - не явно
+
+------------------------------------------------------------------------
+		--Operator Overloading--
+x
+Point(const Point* this, int value)
+{
+}
+const Point* this -> скритий параметр передається завжди
+
+#region -> команда / коментар
+
+#pragma region Constructors
+#pragma endregion I
+
+перезавантажувати оператори щоб 
+навчити компілятор працювати з нашими типами данних
+
+bool res;
+res = (this->x + this->y) > (other.x + other.y) ? true : false;
+return res
+
+якщо оператор унарний - this приходить сам other не треба
+якщо бінарний то - this приходить сам other обовязково треба
+
+тип з яким навчаємо(void,point) оператор[type](+,-,*,/)  arguments-(const Point& other)
+void operator[type](arguments)
+
+Point operator /(const Point& other){
+	Point res(this->x / other.x, this->y / other.y);
+	return res;
+}
+res = p1 / p2
+------------------------------------------------------------------------
+		--Operator Overloading 2--
+
+постфіксна форма 
+--вводимо фіктивний параметр для постфіксної форми (int a)--
+Point operator++(int a)
+{
+	this->x++;
+	this->y++;
+	return *this;
+{
+щоб працював p1++
+
+--friend робимо коли ф-ція поза класом і мала доступ до приватних полів--
+
+friend bool operator <(const Point& left, const Point& right);
+//робимо функцію дружжнею порушуємо інкапсуляцію в классі
+
+bool operator <(const Point& left, const Point& right)
+{
+return (left.x + left.y) < (right.x + right.y);//прямий доступ
+}
+explicit заборона неявного перетвор
+ 
+	--Оператори () []--
+ [] робимо щоб дістати елемент по індексу
+ 
+ Vagon operator[](int index){
+	if(index <0 || index>vagonCount){return Vagon();} // якщо false
+ return vagons[index]} //якщо true
+ 
+ v = tr1[0] // елемнт з index 0
+ 
+ ------------------------------------------------------------------------
+		--Move constructor--
+ header - для inline нажим на лампу move to defenition
+//Конструктор копіювання 1Копіює дані 2Виділяє нову пам'ять 
+3Повільніше 4Оригінал залишається незмінним 5Використовується для постійних об'єктів
+
+//Конструктор переносу 1Переносить дані 2Використовує існуючу пам'ять 
+3Швидше 4Оригінал стає "порожнім" 5Використовується для тимчасових об'єктів
+
+ Vector(const Vector& other) { 				// copy ctor (Vector&)
+    this->points = new Point[other.countPoint];
+    for (int i = 0; i < other.countPoint; i++)
+    {
+        this->points[i] = other.points[i];
+    }
+    this->countPoint = other.countPoint;
+}
+Vector(Vector&& other) { 					//move ctor (Vector&&)
+    this->countPoint = other.countPoint;
+    this->points = other.points;
+    other.points = nullptr;
+}
+ 
+  ------------------------------------------------------------------------
+		--Template constructor--
+ --template використ для перезагрузки ф-ції
+ --(щоб функція могла працбювати з int і long одночасно)
+ --template<typename T_arr> і підстав де треба змін тип данних T_arr
+ --якщо клас буде різні типи данних то створ шаблонний класс
+ 
+ 
+ template<typename T_coll, typename T_value>
+ дві змінні які обовязково будуть використані
+--Myclass<long,string> class1(long_arr,"Char text") 
+//<long,string> це T_coll і T_value 
+ 
+ Point<int> point(4,6)
+ Point<float>point2(5.45,6.85)
+ 
+ --template -> не можна розділити проект на файли
+ --class шаблонний -> вся реалізація в 1 файлі
+//initializer_list<int> шаблонна ф-ція яка дає змогу ініціалізувати Array arr2({4,5,6,98,1,2})
+
+Array(const initializer_list<int> & list) {
+	this->size = list.size() // визнач size list
+	arr = new int[size];
+	for(int elem : list) //foreach має smartpointer проходить по кожному елем list
+	arr[i++] = elem;
+}
+
+ stack - тимчасові змінні які знищуються при ивході з {}
+ 
+ static - зберіг сатичні змінні які створ на початку і знищ в кінці
+ 
+ heap - динамічна
+ -----------------------------------------------------------------------
+		--Dynam Data Stack Queuу--
+class Stack - резерезвуємо комірки
+first in last out
+
+~Stack()=default; -> ~Stack(){};
+-delete -> заборона використовиється тільки для:
+ctor default, destructor, ctor copy, move ctor
+
+_getch() - викор у циклі і при натиску на любну кнопку закінчує інтерацію
+суть дин данних - резерв
+  -----------------------------------------------------------------------
+		--Dynam Data Queue with priority--
+дин структури данних - мають резерв
+дтн масиви постійне перевіділення пам'яті		
+		
+ види черг
+ приорітетне всключення
+ 
+ приорітетне виключення
+ 
+ struct Element
+{
+char value;
+int priority;
+};
+class QueueWithPriority
+{
+	Element* arr
+	int size;
+}
+public:
+	QueueWithPriority(): arr(nullptr), size (0){}
+	~QueueWithPriority()
+	{
+	if (arr != nullptr) delete[] arr;
+	}
+	void Enqueue(Element el)
+	{
+	int index =0;
+	while(arr[index].priority<el.priority {index++;})
+	size++;
+	Element* temp = new Element[size]
+	}
+	
+-----------------------------------------------------------------------
+		--single link- 
+легко видаляти елемент і додавання сортування -  довге
+один елем назив нода
+масив - можливість зарезервувати більше чим треба
+Node(value, adress) - складова у list
+	основні елементи
+head(2,0x23) current(8,0x24), tail(9,nullptr)
+current ходить по нодам і показує на якій він
+
+відмінність списку від масиву: у масиву кожна ячейка одна за одною, 
+у списку елементи розташовані рандомно кожна комірка знає наступного сусіда
+
+якщо просто пододавати елементи і пододавати краще список
+-----------------------------------------------------------------------
+		--double link--	
+single link	- не зручний бо треба починати завжди з початку щоб видал елемент
+нода склад з Node(*prev, value , *next)
+-----------------------------------------------------------------------
+		--Inheritage--
+binary tree - все починається з однієї ноди root
+суть - зберігає елементи в посортованому вигляді - чіткий варіант застосування рекурсії
+елем > за root іде вправо    елем < за root іде вліво
+на її основі побудовані map multimap dictionary
+
+protected - дає змогу використ свої поля наслідникам
+Enemy::Print() -> виклик батьківську ф-цію в дочірньому класі
+
+class Dragon : public Enemy{}  класс Dragon успадковує Enemy
+-----------------------------------------------------------------------
+		--Inheritage Polymorph--	  
+		 
+	#include<windows.h>
+	beep - функція для звука
+	
+	//пишемо в батьківській ф-ції
+virtual - дозволяє зробити перевизначення
+	наслідникам написати власну реалізацію для метода	
+	
+	//пишемо в насліднках
+override -  перевіряє чи є в батьківському класі є така функція
+
+-----------------------------------------------------------------------
+		--Abstract class--
+
+вітруал метод - має реалізацію
+
+abstract class - класс має чисто вітруальний метод
+
+--Virtual void Say() const = 0;--
+
+функція без реалізації небезпечна(метод=0)
+
+чисто вітруаліьний не має реалізації->перетворює клас на абстрактний-
+- метод який =0
+
+поліморфізм - є virtual і override	
+
+-----------------------------------------------------------------------
+		--Agregation composition--
+Композиція - один класс складається з декількох класів (Телефон не існує без компонентів)
+які є його невідємною частиною - без якогось з класів основний буде неповноцінним
+
+Агрегація - взаємодія між класами коли звязок не обов'язковмй
+є взаємозвязок між класами це не композиція і не наслідуваня
+(між office і department) office має department і department має office
+(Телефон і акаунт)
+
+
+Асоціація - коли класи взаємодіють між собою 
+можна реалізацувати 1 до 1; 1 до багаьбох; багто до багаьбох
+
+-----------------------------------------------------------------------
+		--Exception--
+/throw try catch
+if(b==0){
+	cout << "Can't divide by zero" << endl;
+	throw exception("Divide by zero") - кидає помилку
+}		-робить exception
+
+catch(exception ex){
+	cout << ex.what()<<endl;
+	
+throw - кидає на catch і виходить з ф-ції
+
+try - перевіряє код
+catch - її зловлює
+
+-----------------------------------------------------------------------
+		--File writing--
+
+Часто виникає потреба зберегти/зчитати якусь інформацію беспосередньо з файла.
+Що таке файл? Це група байтів, збережена на накопичувачу (HDD, SSD, DVD диск і тд.).
+Управлінням файлами займається операційна система, програмі лише потрібен спосіб для рос
+Під робото з файлом, мається на увазі відкриття, зчитування його вмісту, створення та з
+
+С++ надає пакет класів, які забеспечують цю роботу (знаходяться вони в бібліотеці fstre
+
+ofstream - об'єкт для запису інформації в файл ofstream
+ifstream - для читання
+fstream - одночасно як для запису, так і для читання
+
+friend ofstream& operator <<(ofstream& out, const Animal& animal);
+friend ifstream& operator >>(ifstream& in,  Animal& animal);
+
+ofstream& operator <<(ofstream& out, const Animal& animal){
+	out << animal.name << " " << animal.type << " " << animal.age << " " << animal.weight;
+	return out;
+}
+ifstream& operator >>(ifstream& in,  Animal& animal) {
+	in >> animal.name >> animal.type >> animal.age >> animal.weight;
+	return in;
+}
+
+void SaveToFile(){
+		ofstream out("Zoo.txt", ios_base::out);
+		out << name << endl;
+		out << countAnimal << endl;
+		for (int i = 0; i < countAnimal; i++)
+		{
+			out << animals[i] << endl;
+		}
+		out.close();
+		cout << "Save to file " << endl;
+	}
+	void ReadFromFile(){
+		ifstream in("Zoo.txt", ios_base::in);
+		getline(in, name); 				//in >> name;
+		in >> countAnimal;
+		animals = new Animal[countAnimal];
+		for (int i = 0; i < countAnimal; i++)
+		{
+			in >> animals[i];
+		}
+		in.close();
+	}
+	
+-----------------------------------------------------------------------
+		--Vector--
+vector - шаблонний контейнер який всередині створює дин масив 
+який має деструктор + готовий набір методів		
+
+vector<int> v2(10)
+
+v2[10] = 55;
+v2.erase (v2.begin()+2, v2.end()-2) - видаляє елементи з 3 по 8
+
+//insert add elements
+v2.insert(v2.begin(), { 11,12,13,14 }); -додає на початок цифри
+v2.insert(v2.end(), 5, 44); - 5 разз 44 в кінець
+
+			//куди		//з якого   // по який
+v2.insert(v2.end(), v3.begin(), v3.end(); додає в кінець v2 всі елем v3
+
+v2.capacity  -> кількісьті всіх комірок   v2.size  -> кількісьті занятих комірок
+-----------------------------------------------------------------------
+		--list--
+#include <list>
+STL - набір контейнерних класів які є шаблонними
+дин масив - енерго затратний	
+
+list<int>::iterator iter; 	//iterator - вбудований вказівник який є в колекції
+		
+auto f = 4; auto визначаэ тип данних
+
+bool CompareBookByName(const Book& b1, const Book& b2){
+	return b1.name < b2.name;}
+
+list<Book> library;
+
+libary.sort(CompareBookByName) //CompareBookByName -> адреса методу який визначає як сортувати
+
+-----------------------------------------------------------------------
+		--Map multi map--
+Map - асоціативний контейнер, (ключ,значення)
+додається створенням пари
+
+map<string,int> m;
+m.insert(make_pair("Boris",5));
+
+розобратись
+main
+class Gameworld, location
+
+-----------------------------------------------------------------------
+		--Підготовка до тесту--
+статичні змінні - щоб рахувати к-сть створених об'єктів
+статичні методи - мати доступ до приватної статичної змінної 
+в структурі немає інкапсуляції тип данних який public
+коли великий обїєм class
+const методи які не міняють this(вказівник на об'єкт класу)
+this немає коли ф-ція глобальна,
+у static(1 для всхі не належить нікому) методі
+фіктивний параметр Point operator++(int a)
+throw - помилки return - значення, обидна закінчують роботу
+explcit - у кторі з 1 аргументом щоб заборонити не явне перетворення
+від одного типу данних до іншого
+32 пара default -пустий метод 
+Stack(const Stack& other) = delete; - забороняємо метод
+delete і default -  у 
+/c-tor default
+//destructor
+//c-tor copy
+//move c-tor
+//operator
+
+. Яким чином можна отримати явний доступ до елементів глобальної 
+області видимості - оператор ::
+
+Для чого буває потрібно перевантажувати оператори за 
+допомогою функції? - oj, yfdxbnm rjvgskznjh ghfw.dfnb p 
+dkfcybv nbgjv lfyyb[
+
+види наслідувань: однинарне, множинне
+чисто віртуальний метод клас абстрактний-
+ctor починаються з батьківського до дочірього а dtor навпаки
+virtual dtor - щоб видал батьківський і дочірні дин масиви
+virtual ctor - не існує
+
+масив ячейки один за одним   
+список - ячейки розтошавані рандомно орієнтуються за наступним і попереднімі
+
+vector-легше сортувати і шукати  list- легше зберігати 
+size - ксть елементів   capacity - ксть видалинеї пам'яті
+vector  дин масив але сам управляє дин пам'ятю
+iterator - вказівник вказ на почток або кінець
+list - немає зарезервованих комірок
+-------------------------------------------------------------------------
+		-----List-----
+//add elenets by position
+l1.insert(ll.begin(), 5);
+
+//change size
+//11.resize(50);
+11.resize(50, 7);
+
+//remove element in 11, add element in 12
+11.splice(ll.end(), 12, 12.begin());
+
+недолік - сортувати елменти у list тяжко
+
+list - зберігає послідовно
+
